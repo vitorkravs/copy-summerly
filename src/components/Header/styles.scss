@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+
+#header-container {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 46px 60px 0;
+
+  #menu-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    a {
+      color: $color-text-title;
+      padding: 5px 10px;
+      font-weight: 500;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-primary;
+        transition: all 500ms;
+      }
+    }
+  }
+
+  #button-header-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+
+    background-image: $gradient-button-active, $gradient-button-off;
+    background-size: 0 100%, 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease;
+
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+}
