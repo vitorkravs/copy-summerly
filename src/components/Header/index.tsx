@@ -35,18 +35,19 @@ const Header = () => {
 
   return (
     <header id="header-container">
-      <img id="logo-img" src="logo-img.png" alt="Logo do site" />
-
-      <button className="hamburger" onClick={toggleMenu}>
-        ☰
-      </button>
+      <div id="menu-container">
+        <img id="logo-img" src="logo-img.png" alt="Logo do site" />
+        <button className="hamburger" onClick={toggleMenu}>
+          ☰
+        </button>
+      </div>
 
       <div id="nav-container" className={isMenuOpen ? "active" : ""}>
         <div id="close-menu" onClick={toggleMenu}>
           <FontAwesomeIcon icon={faXmark} style={{ fontSize: "130%" }} />
         </div>
         <div id="nav-links-container">
-          <nav id="menu-options">
+          <nav id="nav-options">
             <a href="/">O que nós oferecemos</a>
             <a href="/">Como funciona</a>
             <a href="/">Portfólio</a>
@@ -57,9 +58,9 @@ const Header = () => {
               <ButtonIcon />
             </button>
           </div>
-          <div id="menu-icons-container">
+          <div id="nav-icons-container">
             <a href="/">
-              <div className="icon-container">
+              <div className="icons">
                 <FontAwesomeIcon
                   icon={faLinkedinIn}
                   style={{ fontSize: "70%" }}
@@ -67,7 +68,7 @@ const Header = () => {
               </div>
             </a>
             <a href="/">
-              <div className="icon-container">
+              <div className="icons">
                 <FontAwesomeIcon
                   icon={faInstagram}
                   style={{ fontSize: "70%" }}
@@ -75,7 +76,7 @@ const Header = () => {
               </div>
             </a>
             <a href="/">
-              <div className="icon-container">
+              <div className="icons">
                 <FontAwesomeIcon icon={faGithub} style={{ fontSize: "70%" }} />
               </div>
             </a>
