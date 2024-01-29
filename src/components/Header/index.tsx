@@ -44,7 +44,7 @@ const Header = () => {
 
       <div id="nav-container" className={isMenuOpen ? "active" : ""}>
         <div id="close-menu" onClick={toggleMenu}>
-          <FontAwesomeIcon icon={faXmark} style={{ fontSize: "130%" }} />
+          <FontAwesomeIcon icon={faXmark} style={{ fontSize: "160%" }} />
         </div>
         <div id="nav-links-container">
           <nav id="nav-options">

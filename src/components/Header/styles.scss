@@ -27,10 +27,6 @@
 
   #logo-img {
     width: 115px;
-
-    @media (min-width: 500px) {
-      width: 196px;
-    }
   }
 
   #nav-container {
@@ -131,6 +127,33 @@
       height: 100vh;
       left: 0;
       top: 0;
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1025px) {
+  #header-container {
+    #logo-img {
+      width: 196px;
+    }
+
+    #nav-container {
+      padding: 110px 48px;
+
+      #close-menu {
+        top: 40px;
+      }
+
+      #nav-links-container {
+        #nav-options {
+          a {
+            font-weight: 800;
+          }
+        }
+        #nav-icons-container {
+          justify-content: start;
+        }
+      }
     }
   }
 }
