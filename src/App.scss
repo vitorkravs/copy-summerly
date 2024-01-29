@@ -1,16 +1,16 @@
 @import "styles/variables.scss";
 
 #root {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  background-color: $color-background;
+}
 
-  min-height: 100vh;
-  min-width: 100vw;
+body {
+  background-color: $color-background;
 }
 
 main {
-  min-height: 100vh;
+  min-height: 120vh;
   width: 100vw;
   position: relative;
   display: flex;

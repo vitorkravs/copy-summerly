@@ -3,6 +3,7 @@ import { useState } from "react";
 //icons
 import { ButtonIcon } from "../Arrow-icon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import {
   faLinkedinIn,
   faInstagram,
@@ -13,11 +14,24 @@ import {
 import "./styles.scss";
 
 const Header = () => {
+  //gerencia o estado do menu: ativo(true) ou desativado(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  //muda o estado do menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  //Se o menu estiver ativo, a opção de touchmove(rolagem da página) é desativada.
+  if (isMenuOpen) {
+    document.body.addEventListener(
+      "touchmove",
+      function (e) {
+        e.preventDefault();
+      },
+      { passive: false }
+    );
+  }
 
   return (
     <header id="header-container">
@@ -28,6 +42,9 @@ const Header = () => {
       </button>
 
       <div id="nav-container" className={isMenuOpen ? "active" : ""}>
+        <div id="close-menu" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={faXmark} style={{ fontSize: "130%" }} />
+        </div>
         <div id="nav-links-container">
           <nav id="menu-options">
             <a href="/">O que nós oferecemos</a>
@@ -40,15 +57,27 @@ const Header = () => {
               <ButtonIcon />
             </button>
           </div>
-          <div id="menu-icons">
+          <div id="menu-icons-container">
             <a href="/">
-              <FontAwesomeIcon icon={faLinkedinIn} />
+              <div className="icon-container">
+                <FontAwesomeIcon
+                  icon={faLinkedinIn}
+                  style={{ fontSize: "70%" }}
+                />
+              </div>
             </a>
             <a href="/">
-              <FontAwesomeIcon icon={faInstagram} />
+              <div className="icon-container">
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  style={{ fontSize: "70%" }}
+                />
+              </div>
             </a>
             <a href="/">
-              <FontAwesomeIcon icon={faGithub} />
+              <div className="icon-container">
+                <FontAwesomeIcon icon={faGithub} style={{ fontSize: "70%" }} />
+              </div>
             </a>
           </div>
         </div>
