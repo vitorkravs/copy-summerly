@@ -15,27 +15,3 @@
   width: 170px;
   background-color: white;
 }
-
-@media (min-width: 1026px) {
-  #default-button {
-    display: flex;
-    padding: 16px 24px;
-    color: $color-text-white;
-    width: 180px;
-    background-color: white;
-    cursor: pointer;
-    background-image: $gradient-button-active, $gradient-button-off;
-    background-size: 0 100%, 100% 100%;
-    background-repeat: no-repeat;
-    transition: background-size 0.5s ease;
-
-    svg {
-      path {
-        fill: white;
-      }
-    }
-    &:hover {
-      background-size: 100% 100%;
-    }
-  }
-}

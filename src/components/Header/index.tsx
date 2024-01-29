@@ -111,6 +111,10 @@ const Header = () => {
             team of content creators with a proven track record.
           </p>
         </div>
+
+        <div id="button hero">
+          <Button text="trabalhe Conosco" />
+        </div>
       </div>
     </header>
   );
