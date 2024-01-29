@@ -12,6 +12,7 @@ import {
 
 //styles
 import "./styles.scss";
+import { OpenNav } from "../nav-icon-close";
 
 const Header = () => {
   //gerencia o estado do menu: ativo(true) ou desativado(false)
@@ -38,25 +39,27 @@ const Header = () => {
       <div id="menu-container">
         <img id="logo-img" src="logo-img.png" alt="Logo do site" />
         <button className="hamburger" onClick={toggleMenu}>
-          ☰
+          <OpenNav />
         </button>
       </div>
 
-      <div id="nav-container" className={isMenuOpen ? "active" : ""}>
+      <div id="nav-container" className={isMenuOpen ? "active" : "desktop"}>
         <div id="close-menu" onClick={toggleMenu}>
           <FontAwesomeIcon icon={faXmark} style={{ fontSize: "160%" }} />
         </div>
         <div id="nav-links-container">
-          <nav id="nav-options">
-            <a href="/">O que nós oferecemos</a>
-            <a href="/">Como funciona</a>
-            <a href="/">Portfólio</a>
-          </nav>
-          <div id="button-header-contact">
-            <button className={isMenuOpen ? "active" : ""}>
-              Contate-nos
-              <ButtonIcon />
-            </button>
+          <div id="teste">
+            <nav id="nav-options">
+              <a href="/">O que nós oferecemos</a>
+              <a href="/">Como funciona</a>
+              <a href="/">Portfólio</a>
+            </nav>
+            <div id="button-header-contact">
+              <button className={isMenuOpen ? "active" : "desktop"}>
+                Contate-nos
+                <ButtonIcon />
+              </button>
+            </div>
           </div>
           <div id="nav-icons-container">
             <a href="/">
