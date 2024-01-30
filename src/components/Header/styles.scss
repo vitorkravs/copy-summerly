@@ -8,6 +8,7 @@
   flex-direction: column;
   width: 100%;
   padding: 5px 20px 0;
+  border-radius: 0 0 65px 65px;
 
   #menu-container {
     display: flex;
@@ -106,6 +107,7 @@
       top: 0;
     }
   }
+
   #button-header-contact {
     display: none;
     padding: 30px 0;
@@ -117,7 +119,152 @@
   }
 
   #hero-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 0;
+    gap: 40px;
+
     color: black;
+    .hero-heading-part-box {
+      line-height: 45px;
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      text-align: center;
+      background-image: $gradient-text-hero;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      h2 {
+        font-weight: 800;
+      }
+    }
+
+    #hero-animation-box {
+      text-align: center;
+
+      #hero-text-bold {
+        font-weight: bold;
+      }
+    }
+
+    #button-hero {
+      #default-button {
+        display: flex;
+        gap: 10px;
+        padding: 16px 24px;
+        color: $color-text-white;
+        width: 220px;
+        background-color: white;
+        cursor: pointer;
+        background-image: $gradient-button-active;
+
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+
+  #img-header-container {
+    display: flex;
+    padding-top: 40px;
+    position: relative;
+
+    .image-hero {
+      width: 336px;
+    }
+
+    .icon-emoji-shopping {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 15px;
+      background-color: rgba(255, 0, 179, 0.131);
+      border-radius: 50%;
+      position: absolute;
+      top: 90px;
+      left: 5px;
+      animation: growPadding 4s infinite;
+      animation: spinEmoji 4s infinite;
+
+      .hero_shopping {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .icon-emoji-party {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 15px;
+      background-color: rgba(255, 179, 0, 0.209);
+      border-radius: 50%;
+      position: absolute;
+      top: 160px;
+      right: 40px;
+      animation: growPadding 4s infinite;
+      animation: spinEmoji 4s infinite;
+
+      .hero_party {
+        transform: rotate(350deg);
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    .icon-emoji-fire {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 22px 22px;
+      background-color: rgba(255, 0, 179, 0.131);
+      border-radius: 50%;
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      animation: growPadding 4s infinite;
+      animation: spinEmoji 4s infinite;
+
+      .hero_fire {
+        transform: rotate(310deg);
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    @keyframes spinEmoji {
+      0% {
+        transform: rotate(15deg) scale(1);
+      }
+      50% {
+        transform: rotate(30deg) scale(1.2);
+      }
+      100% {
+        transform: rotate(15deg) scale(1);
+      }
+    }
+
+    @keyframes growPadding {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        transform: rotate(30deg) scale(1.2);
+      }
+      100% {
+        transform: rotate(0deg) scale(1);
+      }
+    }
+
+    &.active {
+      display: none;
+    }
   }
 }
 
@@ -225,6 +372,7 @@
         width: 100%;
       }
     }
+
     #button-header-contact {
       display: flex;
       align-items: center;

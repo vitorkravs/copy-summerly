@@ -4,4 +4,9 @@ $color-text-title: black;
 $color-text-white: white;
 $gradient-button-off: linear-gradient(45deg, #e72fb6 7%, #8625cb);
 $gradient-button-active: linear-gradient(45deg, black, black);
+$gradient-text-hero: linear-gradient(
+  to right,
+  rgb(231, 47, 182),
+  rgb(104, 34, 209)
+);
 $border-header-nav: 1px solid rgba(255, 255, 255, 0.133);
