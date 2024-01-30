@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 //icons
-import { ButtonIcon } from "../Arrow-icon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -93,7 +92,45 @@ const Header = () => {
       </div>
 
       <div id="hero-box">
-        <div>
+        <div
+          id="emojis-header-container"
+          className={isMenuOpen ? "active" : ""}
+        >
+          <div className="icon-emoji-shopping">
+            <img
+              src="https://uploads-ssl.webflow.com/63d0f8b43ca85422d48a69d6/63d187a8a7449241d438c9b9_shopping-bags.png"
+              loading="lazy"
+              alt=""
+              className="hero_shopping"
+            ></img>
+          </div>
+          <div className="icon-emoji-cloud">
+            <img
+              src="https://uploads-ssl.webflow.com/63d0f8b43ca85422d48a69d6/63d187a866d33a81bbe2532b_cloud-with-lightning.png"
+              loading="lazy"
+              alt=""
+              className="hero_cloud"
+            ></img>
+          </div>
+          <div className="icon-emoji-party">
+            <img
+              src="https://uploads-ssl.webflow.com/63d0f8b43ca85422d48a69d6/63d187a871aadb6252940663_party-popper.png"
+              loading="lazy"
+              alt=""
+              className="hero_party"
+            ></img>
+          </div>
+          <div className="icon-emoji-fire">
+            <img
+              src="https://uploads-ssl.webflow.com/63d0f8b43ca85422d48a69d6/63d1807dd0496a3408c33ef6_fire.png"
+              loading="lazy"
+              alt=""
+              className="hero_fire"
+            ></img>
+          </div>
+        </div>
+
+        <div id="hero-text-container">
           <div className="hero-heading-part-box">
             <h2>Agência de mídia</h2>
           </div>
@@ -120,38 +157,11 @@ const Header = () => {
         <div id="button-hero">
           <Button text="Trabalhe Conosco" />
         </div>
-      </div>
-      <div id="img-header-container" className={isMenuOpen ? "active" : ""}>
-        <div className="icon-emoji-shopping">
-          <img
-            src="https://uploads-ssl.webflow.com/63d0f8b43ca85422d48a69d6/63d187a8a7449241d438c9b9_shopping-bags.png"
-            loading="lazy"
-            alt=""
-            className="hero_shopping"
-          ></img>
-        </div>
-        <div className="icon-emoji-party">
-          <img
-            src="https://uploads-ssl.webflow.com/63d0f8b43ca85422d48a69d6/63d187a871aadb6252940663_party-popper.png"
-            loading="lazy"
-            alt=""
-            className="hero_party"
-          ></img>
-        </div>
-        <div className="icon-emoji-fire">
-          <img
-            src="https://uploads-ssl.webflow.com/63d0f8b43ca85422d48a69d6/63d1807dd0496a3408c33ef6_fire.png"
-            loading="lazy"
-            alt=""
-            className="hero_fire"
-          ></img>
-        </div>
-
         <img
           src="https://uploads-ssl.webflow.com/63d0f8b43ca85422d48a69d6/640e177a346b3466d52f1c92_Final_ILL_FinalRGB.svg"
           loading="lazy"
           alt="mulher com celular"
-          className="image-hero"
+          id="image-hero"
         ></img>
       </div>
     </header>
