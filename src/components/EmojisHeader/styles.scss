@@ -1,0 +1,168 @@
+.icon-emoji-shopping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(255, 0, 179, 0.131);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 36%;
+  left: 10%;
+  animation: growPadding 4s infinite;
+  animation: spinEmoji 4s infinite;
+
+  .hero_shopping {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.icon-emoji-cloud {
+  display: none;
+}
+
+.icon-emoji-party {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px;
+  background-color: rgba(255, 179, 0, 0.209);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 31%;
+  right: 20%;
+  animation: spinEmoji 4s infinite;
+
+  .hero_party {
+    transform: rotate(350deg);
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.icon-emoji-rocket {
+  display: none;
+}
+
+.icon-emoji-fire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px 22px;
+  background-color: rgba(255, 0, 179, 0.131);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 40%;
+  right: 15%;
+  animation: spinEmoji 4s infinite;
+
+  .hero_fire {
+    transform: rotate(310deg);
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.icon-emoji-goal {
+  display: none;
+}
+
+@keyframes spinEmoji {
+  0% {
+    transform: rotate(15deg) scale(1);
+  }
+  50% {
+    transform: rotate(30deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(15deg) scale(1);
+  }
+}
+
+@media (min-width: 600px) {
+  .icon-emoji-cloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px;
+    background-color: rgba(0, 76, 255, 0.079);
+    border-radius: 50%;
+    position: absolute;
+    top: 11%;
+    left: 45%;
+    animation: spinEmoji 4s infinite;
+
+    .hero_cloud {
+      transform: rotate(330deg);
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  .icon-emoji-fire {
+    bottom: 18%;
+    right: 86%;
+    padding: 40px;
+    .hero_fire {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .icon-emoji-party {
+    bottom: 2%;
+    right: 86%;
+    padding: 25px;
+    .hero_party {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .icon-emoji-shopping {
+    bottom: 29%;
+    left: 78%;
+    padding: 40px;
+    .hero_shopping {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .icon-emoji-goal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 76, 255, 0.079);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 33%;
+    left: 2%;
+    animation: spinEmoji 4s infinite;
+
+    .hero_goal {
+      transform: rotate(340deg);
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .icon-emoji-rocket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    background-color: rgba(0, 76, 255, 0.079);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 33%;
+    right: -3%;
+    animation: spinEmoji 4s infinite;
+
+    .hero_rocket {
+      transform: rotate(340deg);
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

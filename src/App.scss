@@ -10,17 +10,6 @@ body {
 }
 
 main {
-  min-height: 100vh;
-  width: 100vw;
-  position: relative;
   display: flex;
   flex-direction: column;
-}
-
-@keyframes appear {
-  from {
-  }
-
-  to {
-  }
 }

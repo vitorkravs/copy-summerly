@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 //icons
 import { ButtonIcon } from "../Arrow-icon";
@@ -14,26 +14,27 @@ import {
 import "./styles.scss";
 import { OpenNav } from "../nav-icon-close";
 import Button from "../Button/Button";
+import Emojis from "../EmojisHeader";
 
 const Header = () => {
   //gerencia o estado do menu: ativo(true) ou desativado(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  console.log(isMenuOpen);
   //muda o estado do menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   //Se o menu estiver ativo, a opção de touchmove(rolagem da página) é desativada.
-  if (isMenuOpen) {
-    document.body.addEventListener(
-      "touchmove",
-      function (e) {
-        e.preventDefault();
-      },
-      { passive: false }
-    );
-  }
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Adiciona ouvinte de evento para prevenir scroll
+      document.body.style.overflow = "hidden";
+    } else {
+      // Remove ouvinte de evento para permitir scroll
+      document.body.style.overflow = "auto";
+    }
+  }, [isMenuOpen]);
 
   return (
     <header id="header-container">
@@ -41,7 +42,7 @@ const Header = () => {
         <div id="img-container">
           <img id="logo-img" src="logo-img.png" alt="Logo do site" />
         </div>
-        <button className="hamburger" onClick={toggleMenu}>
+        <button id="hamburger" onClick={toggleMenu}>
           <OpenNav />
         </button>
         <div id="nav-container" className={isMenuOpen ? "active" : "desktop"}>
@@ -49,7 +50,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faXmark} style={{ fontSize: "160%" }} />
           </div>
           <div id="nav-links-container">
-            <div id="teste">
+            <div id="nav-options-container">
               <nav id="nav-options">
                 <a href="/">O que nós oferecemos</a>
                 <a href="/">Como funciona</a>
@@ -91,30 +92,40 @@ const Header = () => {
           </div>
         </div>
       </div>
-
-      <div id="hero-box">
-        <div className="hero-heading-part-box">
-          <h2>Agência de mídia</h2>
+      <div id="header-content">
+        <div id="hero-box">
+          <div>
+            <div className="hero-heading-part-box">
+              <h2>Agência de mídia</h2>
+            </div>
+            <div className="hero-heading-part-box">
+              <h2>Liderada por</h2>
+            </div>
+            <div className="hero-heading-part-box">
+              <h2>Influenciadores</h2>
+            </div>
+          </div>
+          <div id="hero-animation-box">
+            <p>
+              Alcance seu público-alvo de maneira genuína por meio de
+              crescimento pago e orgânico no{" "}
+              <span id="hero-text-bold">
+                TikTok, Instagram, YouTube, Pinterest
+              </span>{" "}
+              e muito mais por uma equipe de criadores de conteúdo com histórico
+              comprovado.
+            </p>
+          </div>
+          <div id="button-hero">
+            <Button text="Trabalhe Conosco" />
+          </div>
         </div>
-        <div className="hero-heading-part-box">
-          <h2>Liderada por</h2>
-        </div>
-        <div className="hero-heading-part-box">
-          <h2>Influenciadores</h2>
-        </div>
-
-        <div className="hero-animation-box">
-          <p>
-            Alcance seu público-alvo de maneira genuína por meio de crescimento
-            pago e orgânico em
-            <span>TikTok, Instagram, YouTube, Pinterest</span> and more by a
-            team of content creators with a proven track record.
-          </p>
-        </div>
-
-        <div id="button hero">
-          <Button text="trabalhe Conosco" />
-        </div>
+        <Emojis />
+        <img
+          src="https://uploads-ssl.webflow.com/63d0f8b43ca85422d48a69d6/640e177a346b3466d52f1c92_Final_ILL_FinalRGB.svg"
+          alt="Mulher com celular"
+          id="image-hero"
+        ></img>
       </div>
     </header>
   );
