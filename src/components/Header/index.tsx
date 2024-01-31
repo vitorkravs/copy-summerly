@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 //icons
-import { ButtonIcon } from "../Arrow-icon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -38,6 +37,7 @@ const Header = () => {
 
   return (
     <header id="header-container">
+      <Emojis />
       <div id="menu-container">
         <div id="img-container">
           <img id="logo-img" src="logo-img.png" alt="Logo do site" />
@@ -120,7 +120,6 @@ const Header = () => {
             <Button text="Trabalhe Conosco" />
           </div>
         </div>
-        <Emojis />
         <img
           src="https://uploads-ssl.webflow.com/63d0f8b43ca85422d48a69d6/640e177a346b3466d52f1c92_Final_ILL_FinalRGB.svg"
           alt="Mulher com celular"
