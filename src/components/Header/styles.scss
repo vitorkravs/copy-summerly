@@ -258,8 +258,11 @@
         display: none;
       }
 
-      #logo-img {
-        width: 196px;
+      #img-container {
+        width: 35%;
+        #logo-img {
+          width: 196px;
+        }
       }
 
       #nav-container {
@@ -421,6 +424,14 @@
 
 @media (min-width: 1281px) {
   #header-container {
+    #menu-container {
+      #img-container {
+        width: 45%;
+        #logo-img {
+          width: 196px;
+        }
+      }
+    }
     #header-content {
       #hero-box {
         #subtitle-container {
