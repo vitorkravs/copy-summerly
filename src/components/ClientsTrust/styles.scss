@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 
 #client-trust-container {
-  padding: 80px 0;
+  padding: 75px 0;
   width: 100%;
   overflow: hidden;
 
@@ -13,7 +13,130 @@
 
   #client-list {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    height: 200px;
+
+    .client-row-one {
+      position: absolute;
+      top: 0;
+      left: 4%;
+      animation: slideScrollingRowOne 30s infinite;
+    }
+
+    .client-row-two {
+      position: absolute;
+      right: 4%;
+      top: 50%;
+      animation: slideScrollingRowTwo 30s infinite;
+    }
+
+    @keyframes slideScrollingRowOne {
+      0% {
+        left: 4%;
+      }
+
+      50% {
+        left: -70%;
+      }
+
+      100% {
+        left: 4%;
+      }
+    }
+
+    @keyframes slideScrollingRowTwo {
+      0% {
+        right: 4%;
+      }
+
+      50% {
+        right: -70%;
+      }
+
+      100% {
+        right: 4%;
+      }
+    }
+
+    .client-row-one,
+    .client-row-two {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 30px;
+      justify-content: center;
+      grid-column-gap: 40px;
+
+      .client-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 85px;
+        border: $border-client-trust;
+        border-radius: 30px;
+        padding: 10px 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  #client-trust-container {
+    #client-list {
+      height: auto;
+
+      .client-row-two,
+      .client-row-one {
+        .client-container {
+          border: none;
+        }
+      }
+
+      .client-row-one {
+        position: relative;
+        animation: none;
+        width: 100%;
+        left: 0;
+      }
+
+      .client-row-two {
+        position: relative;
+        animation: none;
+        width: 100%;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  #client-trust-container {
+    padding: 45px 0;
+    h3 {
+      font-size: 40px;
+      font-weight: 800;
+    }
+
+    #client-list {
+      .client-row-one,
+      .client-row-two {
+        grid-column-gap: 60px;
+        .client-container {
+          img {
+            padding: 0;
+          }
+        }
+      }
+    }
   }
 }
