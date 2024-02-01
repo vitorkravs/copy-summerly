@@ -1,11 +1,15 @@
 import "./App.scss";
+import ClientTrust from "./components/ClientsTrust";
 import Header from "./components/Header";
 
 function App() {
   return (
-    <main>
+    <>
       <Header />
-    </main>
+      <main>
+        <ClientTrust />
+      </main>
+    </>
   );
 }
 
