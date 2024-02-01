@@ -47,7 +47,10 @@ const Header = () => {
         </button>
         <div id="nav-container" className={isMenuOpen ? "active" : "desktop"}>
           <div id="close-menu" onClick={toggleMenu}>
-            <FontAwesomeIcon icon={faXmark} style={{ fontSize: "160%" }} />
+            <FontAwesomeIcon
+              icon={faXmark}
+              style={{ fontSize: "160%", color: "white" }}
+            />
           </div>
           <div id="nav-links-container">
             <div id="nav-options-container">
@@ -94,7 +97,7 @@ const Header = () => {
       </div>
       <div id="header-content">
         <div id="hero-box">
-          <div>
+          <div id="subtitle-container">
             <div className="hero-heading-part-box">
               <h2>Agência de mídia</h2>
             </div>
@@ -102,7 +105,7 @@ const Header = () => {
               <h2>Liderada por</h2>
             </div>
             <div className="hero-heading-part-box">
-              <h2>Influenciadores</h2>
+              <h2>Influencers</h2>
             </div>
           </div>
           <div id="hero-animation-box">

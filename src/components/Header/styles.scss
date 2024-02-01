@@ -248,131 +248,205 @@
   }
 }
 
-@media (min-width: 1026px) {
+@media (min-width: 1025px) {
   #header-container {
-    padding: 30px 98px 0;
-
+    padding: 15px 90px 0;
     #menu-container {
       width: 100%;
 
-      #img-container {
-        width: 35%;
-      }
-    }
-
-    .hamburger {
-      display: none;
-    }
-
-    #logo-img {
-      width: 196px;
-    }
-
-    #nav-container {
-      display: block;
-      padding: 0;
-      background-color: white;
-
-      #close-menu {
+      #hamburger {
         display: none;
       }
 
-      #nav-links-container {
-        border: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 0;
-        width: 100%;
-        padding-top: 0;
+      #logo-img {
+        width: 196px;
+      }
 
-        #teste {
+      #nav-container {
+        display: block;
+        padding: 0;
+        background-color: white;
+
+        #close-menu {
+          display: none;
+        }
+
+        #nav-links-container {
+          border: none;
           display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          height: 0;
+          width: 100%;
+          padding-top: 0;
+
+          #nav-options-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            #nav-options {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+
+              a {
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 500;
+                color: $color-text-title;
+              }
+
+              a:hover {
+                color: $color-primary;
+              }
+            }
+
+            #button-header-contact {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0;
+              border-bottom: none;
+
+              #default-button {
+                display: flex;
+                gap: 10px;
+                padding: 16px 24px;
+                color: $color-text-white;
+                width: 180px;
+                background-color: white;
+                cursor: pointer;
+                background-image: $gradient-button-active, $gradient-button-off;
+                background-size: 0 100%, 100% 100%;
+                background-repeat: no-repeat;
+                transition: background-size 0.5s ease;
+
+                svg {
+                  path {
+                    fill: white;
+                  }
+                }
+                &:hover {
+                  background-size: 100% 100%;
+                }
+              }
+            }
+          }
+
+          #nav-icons-container {
+            display: none;
+          }
+        }
+        &.desktop {
+          display: flex;
+          flex-direction: row;
           justify-content: space-between;
           width: 100%;
         }
-
-        #nav-options {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          text-decoration: none;
-          font-size: 16px;
-          font-weight: 500;
-          color: $color-text-title;
-        }
-
-        a:hover {
-          color: $color-primary;
-        }
-
-        #nav-icons-container {
-          display: none;
-        }
-      }
-      &.desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
       }
     }
 
-    #button-header-contact {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      border-bottom: none;
+    #header-content {
+      align-items: start;
+      flex-direction: row;
 
-      #default-button {
-        display: flex;
-        gap: 10px;
-        padding: 16px 24px;
-        color: $color-text-white;
-        width: 180px;
-        background-color: white;
-        cursor: pointer;
-        background-image: $gradient-button-active, $gradient-button-off;
-        background-size: 0 100%, 100% 100%;
-        background-repeat: no-repeat;
-        transition: background-size 0.5s ease;
+      #hero-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding: 50px 0 33px;
+        gap: 40px;
+        padding: 90px 0;
+        color: black;
 
-        svg {
-          path {
-            fill: white;
+        #subtitle-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          width: 100%;
+
+          .hero-heading-part-box {
+            line-height: 70px;
+            font-size: 2.2rem;
+
+            h2 {
+              font-weight: 800;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              background-image: $gradient-text-hero;
+            }
           }
         }
-        &:hover {
-          background-size: 100% 100%;
+
+        #hero-animation-box {
+          max-width: 500px;
+          text-align: justify;
+
+          #hero-text-bold {
+            font-weight: bold;
+          }
+        }
+
+        #button-hero {
+          #default-button {
+            display: flex;
+            gap: 10px;
+            padding: 16px 24px;
+            color: $color-text-white;
+            width: 220px;
+            background-color: white;
+            cursor: pointer;
+            background-image: $gradient-button-active;
+
+            svg {
+              path {
+                fill: white;
+              }
+            }
+          }
+        }
+      }
+
+      #image-hero {
+        margin: auto;
+        width: 43%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1281px) {
+  #header-container {
+    #header-content {
+      #hero-box {
+        #subtitle-container {
+          .hero-heading-part-box {
+            line-height: 85px;
+            font-size: 2.9rem;
+          }
         }
       }
     }
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1400px) {
   #header-container {
     padding: 30px 80px 0;
-    #menu-container {
-      #img-container {
-        width: 40%;
-      }
-    }
   }
 }
 
-@media (min-width: 1180px) {
+@media (min-width: 1500px) {
   #header-container {
-    padding: 30px 95px 0;
-    #menu-container {
-      #img-container {
-        width: 47%;
-      }
-    }
+    padding: 30px 172px 0;
+  }
+}
+@media (min-width: 1700px) {
+  #header-container {
+    padding: 30px 300px 0;
   }
 }

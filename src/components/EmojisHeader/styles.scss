@@ -101,7 +101,7 @@
 
   .icon-emoji-fire {
     bottom: 18%;
-    right: 86%;
+    right: 89%;
     padding: 40px;
     .hero_fire {
       width: 48px;
@@ -164,5 +164,37 @@
       width: 40px;
       height: 40px;
     }
+  }
+}
+
+@media (min-width: 1025px) {
+  .icon-emoji-cloud {
+    top: 15%;
+    left: 25%;
+  }
+
+  .icon-emoji-fire {
+    bottom: 38%;
+    right: 45%;
+  }
+
+  .icon-emoji-party {
+    bottom: 4%;
+    right: 43%;
+  }
+
+  .icon-emoji-shopping {
+    bottom: 70%;
+    left: 82%;
+  }
+
+  .icon-emoji-goal {
+    bottom: 75%;
+    left: 55%;
+  }
+
+  .icon-emoji-rocket {
+    bottom: 33%;
+    right: 0%;
   }
 }
