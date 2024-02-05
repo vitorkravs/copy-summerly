@@ -2,7 +2,7 @@ import "./styles.scss";
 
 const ClientTrust = () => {
   return (
-    <div id="client-trust-container">
+    <section id="client-trust-container">
       <h3>Confiado por</h3>
 
       <div id="client-list">
@@ -53,7 +53,7 @@ const ClientTrust = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
