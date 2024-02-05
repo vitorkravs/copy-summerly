@@ -1,0 +1,88 @@
+@import "../../styles/variables.scss";
+
+#about-container {
+  padding: 0 20px;
+  overflow: hidden;
+
+  .about-one,
+  .about-two {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 60px;
+    margin-bottom: 80px;
+
+    .about-text {
+      h3 {
+        font-size: 32px;
+        color: $color-text-white;
+        line-height: 115%;
+        margin-bottom: 30px;
+
+        span {
+          font-weight: 800;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          background-image: $gradient-text-hero;
+        }
+      }
+
+      p {
+        color: $color-text-white;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .about-one {
+    .about-img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .img-one {
+        max-width: 95%;
+      }
+
+      .img-two {
+        max-width: 100%;
+        position: absolute;
+        bottom: -60px;
+      }
+    }
+  }
+
+  .about-two {
+    margin-bottom: 0;
+    .about-text {
+      h3 {
+        text-align: center;
+      }
+    }
+
+    .about-video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      img {
+        max-width: 320px;
+        overflow: hidden;
+      }
+
+      video {
+        width: 300px;
+        height: 96%;
+        border-radius: 45px;
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+      }
+    }
+  }
+}
