@@ -18,13 +18,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 
     img {
       width: 48px;
+      transition: 0.5s;
     }
   }
 
   h4 {
+    max-width: 300px;
     text-align: center;
     font-size: 50px;
     color: $color-text-white;
@@ -32,9 +35,22 @@
   }
 
   p {
+    max-width: 300px;
     text-align: center;
     color: $color-text-white;
     font-weight: 600;
     font-size: 22px;
+  }
+}
+
+#card-container:hover {
+  .icon {
+    width: 140px;
+    height: 140px;
+    background-color: $color-text-white;
+
+    img {
+      width: 58px;
+    }
   }
 }

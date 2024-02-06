@@ -26,3 +26,17 @@
     border-radius: 0 0 40px 40px;
   }
 }
+
+@media (min-width: 992px) {
+  #numbers-container {
+    padding: 0 30px 40px;
+    .number-wrapper {
+      .cards-flex {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        grid-column-gap: 30px;
+      }
+    }
+  }
+}
