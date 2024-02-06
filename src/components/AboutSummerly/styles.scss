@@ -172,3 +172,53 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  #about-container {
+    padding: 0 150px;
+
+    .about-one {
+      grid-column-gap: 0;
+      .about-img {
+        width: 50%;
+        align-items: flex-end;
+
+        .img-one {
+          max-width: 60%;
+        }
+
+        .img-two {
+          max-width: 60%;
+        }
+      }
+    }
+
+    .about-two {
+      .about-text {
+        align-items: center;
+
+        h3 {
+          width: 430px;
+          text-align: justify;
+        }
+      }
+      .about-video {
+        img {
+          max-width: 70%;
+        }
+
+        video {
+          width: 65%;
+          height: 98%;
+          border-radius: 45px;
+          background-size: cover;
+          position: absolute;
+          top: 50%;
+          left: 35%;
+          transform: translate(-50%, -50%);
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
