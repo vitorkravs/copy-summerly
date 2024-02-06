@@ -1,0 +1,63 @@
+@import "../../styles/variables.scss";
+
+footer {
+  width: 100%;
+  padding: 30px 0 63px 0;
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+
+    .row-footer {
+      .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        grid-column-gap: 10px;
+
+        input {
+          line-height: 130%;
+          padding: 8px 12px;
+          background-color: rgba(255, 255, 255, 0);
+          border: none;
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        .ArrowIcon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          border-radius: 50%;
+          background-color: $background-footer-icon;
+        }
+      }
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column-gap: 8px;
+        margin-top: 50px;
+        padding-top: 50px;
+        border-top: $border-header-nav;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          border: 1px solid white;
+          .icon {
+            font-size: 100%;
+            padding: 15px;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
